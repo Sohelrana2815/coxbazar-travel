@@ -1,6 +1,14 @@
+import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Destination = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  const handleDateChange = (data) => {
+    setSelectedDate(data);
+  };
   return (
     <>
       <Navbar></Navbar>
@@ -21,8 +29,8 @@ const Destination = () => {
           </div>
           {/* <div> */}
           {/* 1st option */}
-          <div className="card shrink-0 h-96 w-full max-w-sm shadow-2xl bg-base-100 p-6">
-            <h2 className="ml-3">Origin</h2>
+          <div className="card shrink-0 h-[400px] w-full max-w-sm shadow-2xl bg-base-100 p-6 space-y-5">
+            <h2>Origin</h2>
             <select className="select w-full mx-auto max-w-xs bg-gray-200">
               <option disabled selected>
                 Pick your Origin
@@ -33,8 +41,8 @@ const Destination = () => {
               <option>Lisa</option>
               <option>Maggie</option>
             </select>
-            <div className="mt-10">
-              <h2 className="ml-3">Destination</h2>
+            <div>
+              <h2>Destination</h2>
               <select className="select w-full mx-auto max-w-xs bg-gray-200">
                 <option disabled selected>
                   Pick your Destination
@@ -45,7 +53,28 @@ const Destination = () => {
                 <option>Lisa</option>
                 <option>Maggie</option>
               </select>
-              <button className="btn btn-warning w-full mt-16">
+              <div className="flex mt-4 gap-2">
+                <div className="space-y-2">
+                  <h1>Form</h1>
+                  <DatePicker
+                    selected={selectedDate}
+                    onChange={handleDateChange}
+                    dateFormat="MM/DD/YY"
+                    className="bg-gray-200  w-full rounded-lg text-center p-3  "
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h1>To</h1>
+                  <DatePicker
+                    selected={selectedDate}
+                    onChange={handleDateChange}
+                    dateFormat="MM/DD/YY"
+                    className="bg-gray-200 w-full rounded-lg text-center p-3  "
+                  />
+                </div>
+              </div>
+
+              <button className="btn btn-warning w-full mt-6">
                 Start Booking
               </button>
             </div>

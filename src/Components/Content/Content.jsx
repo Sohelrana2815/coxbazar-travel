@@ -24,7 +24,10 @@ const Content = () => {
               </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
-              <img className="w-[270px] h-[416px]  " src={location2} />
+              <img
+                className="w-[270px] h-[416px] border-4 rounded-3xl border-yellow-400   "
+                src={location2}
+              />
               <div className=" mt-[430px] relative right-[180px] space-x-4">
                 <a href="#slide1" className="btn btn-circle">
                   ❮
@@ -36,7 +39,10 @@ const Content = () => {
             </div>
             {/* 3 */}
             <div id="slide3" className="carousel-item relative w-full">
-              <img className="w-[270px] h-[416px]  " src={location3} />
+              <img
+                className="w-[270px] h-[416px] border-4 rounded-3xl border-yellow-400  "
+                src={location3}
+              />
               <div className=" mt-[430px] relative right-[180px] space-x-4">
                 <a href="#slide2" className="btn btn-circle">
                   ❮
@@ -47,7 +53,10 @@ const Content = () => {
               </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full">
-              <img src={location1} className="w-[270px] h-[416px]  " />
+              <img
+                src={location2}
+                className="w-[270px] h-[416px] border-4 rounded-3xl border-yellow-400  "
+              />
               <div className=" mt-[430px] relative right-[180px] space-x-4">
                 <a href="#slide3" className="btn btn-circle">
                   ❮
