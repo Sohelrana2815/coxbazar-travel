@@ -29,9 +29,9 @@ const Destination = () => {
           </div>
           {/* <div> */}
           {/* 1st option */}
-          <div className="card shrink-0 h-[400px] w-full max-w-sm shadow-2xl bg-base-100 p-6 space-y-5">
+          <div className="card shrink-0 h-[400px] w-full max-w-sm shadow-2xl bg-base-100 p-6">
             <h2>Origin</h2>
-            <select className="select w-full mx-auto max-w-xs bg-gray-200">
+            <select className="select mt-4 w-full mx-auto max-w-xs bg-gray-200">
               <option disabled selected>
                 Pick your Origin
               </option>
@@ -42,8 +42,8 @@ const Destination = () => {
               <option>Maggie</option>
             </select>
             <div>
-              <h2>Destination</h2>
-              <select className="select w-full mx-auto max-w-xs bg-gray-200">
+              <h2 className="mt-4">Destination</h2>
+              <select className="select mt-4 w-full mx-auto max-w-xs bg-gray-200">
                 <option disabled selected>
                   Pick your Destination
                 </option>
