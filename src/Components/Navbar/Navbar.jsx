@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../public/logo.png";
+import { GoSearch } from "react-icons/go";
+
 const Navbar = () => {
   const navLinks = (
     <>
@@ -57,10 +59,13 @@ const Navbar = () => {
             </ul>
           </div>
           <img width={150} src={logo} alt="" />
+          <span className="text-lg relative">
+            <GoSearch className="absolute -top-2 left-1" />
+          </span>
           <input
             type="text"
-            placeholder="Type here"
-            className="input  w-full max-w-xs"
+            placeholder="Search"
+            className="input  w-full max-w-xs px-6 "
           />
         </div>
         <div className="navbar-center hidden lg:flex">
