@@ -7,12 +7,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDgj31VhmIHiYVFDNHt4yB9X3wtp7xDpg0",
-  authDomain: "coxbazar-travel.firebaseapp.com",
-  projectId: "coxbazar-travel",
-  storageBucket: "coxbazar-travel.appspot.com",
-  messagingSenderId: "860404350560",
-  appId: "1:860404350560:web:f76f478247bcdf16294d05",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
