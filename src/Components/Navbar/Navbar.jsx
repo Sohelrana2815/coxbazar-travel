@@ -5,7 +5,18 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   const navLinks = (
     <>
       <div className="space-x-6 flex ml-24">
@@ -51,12 +62,18 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          {
-            user && <p>{user}</p>
-          }
-          <Link to="/login">
-            <button className="btn btn-warning">Login</button>
-          </Link>
+          {user ? (
+            <>
+              <p className="text-warning">{user.email}</p>
+              <button onClick={handleLogOut} className="btn btn-error">
+                sign out
+              </button>
+            </>
+          ) : (
+            <Link to="/login">
+              <button className="btn btn-warning">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </>
