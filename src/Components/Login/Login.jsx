@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import google from '../../assets/icons/google.png'
+
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, googleLogin } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,6 +17,18 @@ const Login = () => {
 
     // sign in user
     loginUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    // google login
+  };
+
+  const handleSignInWithGoogle = () => {
+    googleLogin()
       .then((result) => {
         console.log(result.user);
       })
@@ -69,6 +83,10 @@ const Login = () => {
                     Create an account
                   </Link>
                 </p>
+                <div className="divider">Or</div>
+                <button className="btn" onClick={handleSignInWithGoogle}>
+                   <img width={30} src= {google} alt="" />  Continue with Google
+                </button>
               </div>
             </form>
           </div>
