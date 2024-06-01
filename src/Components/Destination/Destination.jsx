@@ -31,27 +31,27 @@ const Destination = () => {
           {/* 1st option */}
           <div className="card shrink-0 h-[400px] w-full max-w-sm shadow-2xl bg-base-100 p-6">
             <h2>Origin</h2>
-            <select className="select mt-4 w-full mx-auto max-w-xs bg-gray-200">
+            <select className="font-mont font-bold select mt-4 w-full mx-auto max-w-xs bg-gray-200">
               <option disabled selected>
                 Pick your Origin
               </option>
-              <option>Homer</option>
-              <option>Marge</option>
-              <option>Bart</option>
-              <option>Lisa</option>
-              <option>Maggie</option>
+              <option>Dhaka</option>
+              <option>Sylet</option>
+              <option>Barishal</option>
+              <option>Khulna</option>
+              <option>Rajshahi</option>
             </select>
             <div>
               <h2 className="mt-4">Destination</h2>
-              <select className="select mt-4 w-full mx-auto max-w-xs bg-gray-200">
+              <select className="font-mont font-bold select mt-4 w-full mx-auto max-w-xs bg-gray-200">
                 <option disabled selected>
                   Pick your Destination
                 </option>
-                <option>Homer</option>
-                <option>Marge</option>
-                <option>Bart</option>
-                <option>Lisa</option>
-                <option>Maggie</option>
+                <option>Cox'x Bazar</option>
+                <option>Sundorbon</option>
+                <option>Kuakata</option>
+                <option>Senmartin</option>
+                <option>Sreemongol</option>
               </select>
               <div className="flex mt-4 gap-2">
                 <div className="space-y-2">

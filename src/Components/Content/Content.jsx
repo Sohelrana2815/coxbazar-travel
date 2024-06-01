@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import location1 from "../../assets/images/Sajek.png";
 import location2 from "../../assets/images/Sreemongol.png";
 import location3 from "../../assets/images/sundorbon.png";
@@ -76,9 +77,11 @@ const Content = () => {
               headquarters in southeastern Bangladesh. It is famous mostly for
               its long natural sandy beach, and it ...
             </p>
-            <button className="btn btn-warning w-[160px]">
-              Booking <FaArrowRightLong />
-            </button>
+            <Link to="/login">
+              <button className="btn btn-warning w-[160px]">
+                Booking <FaArrowRightLong />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

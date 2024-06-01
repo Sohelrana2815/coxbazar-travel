@@ -6,7 +6,7 @@ import google from '../../assets/icons/google.png'
 
 
 const Login = () => {
-  const { loginUser, googleLogin } = useContext(AuthContext);
+  const { loginUser, googleLogin,setUser } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -19,6 +19,7 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         console.log(result.user);
+        setUser(result)
       })
       .catch((error) => {
         console.error(error);

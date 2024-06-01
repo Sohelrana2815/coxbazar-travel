@@ -1,8 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import fram from "../../../public/Frame.png";
 import { GoSearch } from "react-icons/go";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   const navLinks = (
     <>
       <div className="space-x-6 flex ml-24">
@@ -48,6 +51,9 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
+          {
+            user && <p>{user}</p>
+          }
           <Link to="/login">
             <button className="btn btn-warning">Login</button>
           </Link>
